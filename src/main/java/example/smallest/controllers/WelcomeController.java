@@ -10,12 +10,6 @@ public class WelcomeController {
 	
 	@RequestMapping(method = RequestMethod.GET, produces = {"application/json"})
 	public @ResponseBody String helloWorld() {
-		
-		//Flux
-		
-		
-		
-		
-		return "Hello FUCKING World!!!"; //"application/json" mean this is a text not a redirect
+		return "Hello Wonderful World!!"; 
 	}
 }
