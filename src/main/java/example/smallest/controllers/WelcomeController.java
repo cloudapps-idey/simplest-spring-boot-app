@@ -1,15 +1,22 @@
 package example.smallest.controllers;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller
+@RequestMapping("welcome")
 public class WelcomeController {
-	
-	@RequestMapping(method = RequestMethod.GET, produces = {"application/json"})
-	public @ResponseBody String helloWorld() {
-		return "Hello Wonderful World!!"; 
+
+
+	@GetMapping("message")
+	public ResponseEntity<String> getCategories() {
+
+		String welcomeMessage="Hello Wonderful World !!!";
+		System.out.println("welcome message is :" + welcomeMessage);
+		return new ResponseEntity<String>(welcomeMessage, HttpStatus.OK);
 	}
 }
