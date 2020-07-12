@@ -15,7 +15,7 @@ public class WelcomeController {
 	@GetMapping("message")
 	public ResponseEntity<String> getCategories() {
 
-		String welcomeMessage="Hello Wonderful World !!!";
+		String welcomeMessage="Hello Blue World !!!";
 		System.out.println("welcome message is :" + welcomeMessage);
 		return new ResponseEntity<String>(welcomeMessage, HttpStatus.OK);
 	}
