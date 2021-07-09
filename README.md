@@ -1,6 +1,6 @@
 # simplest-springboot-app
 
-##deploy on opensihft
+## deploy on opensihft via console
 - prerquisite
   - An openshift cluster is running
 - open console 
@@ -9,7 +9,7 @@
   - select 'From Git'. Provide git url for this project and hit 'Create'
 - Access the app on browser http:// < route > /welcome/message
   
-## deploy via cli
+## deploy on openshift via oc cli
   - oc new-project < project name >
   - oc new-app java~https://github.com/IndraniDey1/simplest-spring-boot-app.git
   - oc expose svc/simplest-spring-boot-app
